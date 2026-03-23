@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Únete a la revolución verde de GreenTech. Acción climática sostenible." />
+    <title>Salvemos el Planeta - GreenTech</title>
+    <style>
+        /* CSS Nativo: Sin Bootstrap, fuentes del sistema y colores optimizados */
+        :root {
+            --verde-principal: #28a745;
+            --verde-oscuro: #1e7e34;
+            --bg-claro: #f4fdf4;
+            --texto-oscuro: #212529;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-claro);
+            color: var(--texto-oscuro);
+            height: 100%;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            background-color: #000; /* Fondo oscuro mientras carga la imagen */
+        }
+
+        /* Imagen optimizada con carga perezosa nativa */
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6; /* Oscurecemos la imagen con CSS para que el texto resalte */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            margin: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+        }
+
+        .lead {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .btn-eco {
+            background-color: var(--verde-principal);
+            color: white;
+            border: 2px solid var(--verde-oscuro);
+            padding: 15px 40px;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+        }
+
+        .btn-eco:hover {
+            background-color: var(--verde-oscuro);
+            transform: translateY(-2px);
+        }
+
+        /* Icono SVG nativo para evitar FontAwesome */
+        .svg-icon {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+            vertical-align: middle;
+            margin-right: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #212529;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header class="hero">
+        <img src="imagensost.jpg" alt="Bosque verde" class="hero-img" loading="lazy" width="1920" height="1080">
+        
+        <div class="hero-content">
+            <h1>Salvemos el Planeta</h1>
+            <p class="lead">Únete a la revolución verde de GreenTech.</p>
+            <button class="btn-eco">
+                <svg class="svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17,8C8,10,5.9,16.17,3.82,21.34L5.71,22l1-2.3A4.49,4.49,0,0,0,8,20c4,0,9-2,11-8C19,10,20,5,20,5S18.15,7.6,17,8Z"/>
+                </svg>
+                Quiero ayudar
+            </button>
+        </div>
+    </header>
+
+    <footer>
+        GreenTech Solutions &copy; <span id="anio-actual"></span> - Haciendo un mundo mejor (y cuidando tu CPU)
+    </footer>
+
+    <script>
+        // JavaScript Nativo (Vanilla): Sustituye a jQuery y Moment.js
+        document.getElementById('anio-actual').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
